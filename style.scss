@@ -1,0 +1,1923 @@
+$green: #647B64;
+$white: #ffffff;
+$black: #000000;
+$darkgrey: #333333;
+$darkergrey: #4F4F4F;
+$grey: rgb(148, 148, 148);
+$background: #E5E5E5;
+$footer: #F0DCC5;
+$yellow: #F3B562;
+
+@mixin devices ($breakpoint) {
+    @if $breakpoint == mobile {   
+    @media only screen and (max-width: 375px) {
+      @content
+        }
+    }
+}
+body{
+    max-width: 1440px;
+    max-height: 4082px;
+    background-color: $background;
+    margin: 0;
+    @include devices(mobile){
+    position: absolute;
+    width: 375px;
+    height: 2954px;
+    margin: 0;
+    }
+}
+#logo1{ 
+    position: absolute;
+    top: 50px;
+    left: 140px;
+    @include devices(mobile){
+        width: 45.53px;
+        height: 33px;
+        position: absolute;
+        top: 40px;
+        left: 32px;
+    }
+}
+#logo2{
+    position: absolute;
+    top: 68px;
+    left: 221px;
+    @include devices(mobile){
+        width: 84.98px;
+        height: 9.82px;
+        position: absolute;
+        top: 51.88px;
+        left: 85.46px;
+    }
+}
+.navigation{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 600px;
+    margin-top: 64px;
+    width: 57%;
+    @include devices(mobile){
+            visibility: hidden;
+            width: 0;
+            height: 0;
+    }
+    li{
+    display: inline-block;
+    padding-left: 48px;
+    margin: 0;
+        a{
+        text-decoration: none;
+        color: $darkgrey;
+        font-family: 'Avenir Next';
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        &:hover{
+        color: $grey;
+        }
+    }
+} 
+    .no-bullet{
+        list-style-type: none;
+        .register{
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 155px;
+            padding: 10px 15px;
+            border-radius: 3px;
+            font-family: "Avenir Next";
+            color: $white;
+            border: none;
+            background-image: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+            &:hover{
+                background-image: linear-gradient(102.3deg, #0BB1E3 -4.62%, #0F2976 178.22%);
+                transition: 0.1px ease-in-out;
+            }
+            &:active{
+                box-shadow: 2px 2px $black;
+                transition: 0.1px ease-in-out;
+            }        
+        }
+    }
+}
+#burger{
+    visibility: hidden;
+    @include devices(mobile){
+        visibility: visible;
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 42px;
+        left: 315px;
+    }
+}
+.section-second{
+    height: 343px;
+    width: 495px;
+    margin-top: 241px;
+    margin-left: 180px;
+    @include devices(mobile){
+        height: 172.01px;
+        width: 245px;
+        margin-top: 112px;
+        margin-left: 32px;
+    }
+    .lorem{
+        color: $darkgrey;
+        font-family: 'Avenir Next';
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 116%;
+        margin-top: 0 ;
+        @include devices(mobile){
+            font-family: 'Avenir Next';
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 116%;
+            color: $darkgrey;
+            margin: 0;
+        }
+    }
+    #ellipse{
+        position: absolute;
+        top: 350px;
+        left: 325px;
+        @include devices(mobile){
+            width: 49.06px;
+            height: 49.06px;
+            position: absolute;
+            top: 153px;
+            left: 104px;
+        }
+    }
+    .para1{
+        color: $darkergrey;
+        font-family: 'Avenir Next';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 132%;
+        letter-spacing: 0.04em;
+        @include devices(mobile){
+            font-family: 'Avenir Next';
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            color: $darkergrey;
+            margin-top: 12.2px;
+        }
+    }
+    .get-started{
+        width: 350px;
+        height: 73px;
+        background-image: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+        box-shadow: 0px 20px 40px rgba(128, 143, 150, 0.19);
+        border-radius: 2px;
+        border: none;
+        padding: 0;
+        @include devices(mobile){
+            width: 175.51px;
+            height: 36.61px;
+            left: 32px;
+            top: 309.39px;
+            background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+            box-shadow: 0px 10.0291px 20.0583px rgba(128, 143, 150, 0.19);
+            border-radius: 1.00291px;
+            border: none;
+        }
+        &:after{
+            content: url("../images/Vector.svg");
+            width: 22px;
+            height: 15px;
+            padding-left: 140px;
+            @include devices(mobile){
+            content: url("../images/Vector3.svg");
+            width: 11.03px;
+            height: 7.52px;
+            }
+            }
+        &:hover{
+        background-image: linear-gradient(102.3deg, #0BB1E3 -4.62%, #0F2976 178.22%);
+        transition: 0.1px ease-in-out;
+        }
+        .get-started-text{
+            position: absolute;
+            color: $white;
+            font-family: "Avenir Next";
+            font-weight: 600px;
+            font-size: 16px;
+            line-height: 125.5%;
+            letter-spacing: 0.155em;
+            text-transform: uppercase;
+            margin: 0;
+            margin-left: 29px;
+            @include devices(mobile){
+                font-family: 'Avenir Next';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 125.5%;
+                letter-spacing: 0.155em;
+                text-transform: uppercase;
+                color: $white;
+                position: absolute;
+                margin-top: 3px;
+                margin-left: 16.21px;
+            }
+        }
+    }
+}
+.image{
+    #ellipse2{
+        transform: rotate(-150deg);
+        position: absolute;
+        top: 212px;
+        right: 291.91px;
+        @include devices(mobile){
+            width: 95.37px;
+            height: 95.37px;
+            left: 280px;
+            top: 126.06px;
+        }
+    }
+    #girl{
+        position: absolute;
+        top: 156px;
+        right: 200px;
+        @include devices(mobile){
+            width: 177.97px;
+            height: 304px;
+            left: 280px;
+            top: 97px;
+        }
+    }
+}
+#rectangle{
+    position: absolute;
+    top: 883px;
+    @include devices(mobile){
+        width: 400px;
+        height: 68px;
+        top: 473px;
+        right: 62.74px;
+    }
+}
+.section-third{
+    position: absolute;
+    top: 883px;
+    left: 140px;
+    height: 372px;
+    width: 427px;
+    @include devices(mobile){
+        position: absolute;
+        top: 473px;
+        left: 32px;
+        height: 193.54px;
+        width: 258px;
+    }
+    .text1{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 33px;
+        text-transform: uppercase;
+        color: $yellow;
+        font-family: "Avenir Next";
+        z-index: 2;
+        @include devices(mobile){
+            font-family: 'Avenir Next';
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+            text-transform: uppercase;
+            color: $yellow;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+    .text2{
+        font-family: "Avenir Next";
+        color: $green;
+        font-weight: 500;
+        font-size: 41px;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin-top: 17px;
+        margin-bottom: 40px;
+        @include devices(mobile){
+            font-family: 'Avenir Next';
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 110%;
+            text-transform: uppercase;
+            color: $green;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+    }
+    .para2{
+        color: $darkergrey;
+        font-family: "Avenir Next";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 132%;
+        letter-spacing: 0.04em;
+        margin-bottom: 40px;
+        @include devices(mobile){
+            font-family: 'Avenir Next';
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            color: $darkergrey;
+            margin-top: 25.49px;
+            margin-bottom: 16.81px;
+        }
+    }
+    .get-started{
+        width: 350px;
+        height: 73px;
+        background-image: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+        box-shadow: 0px 20px 40px rgba(128, 143, 150, 0.19);
+        border-radius: 2px;
+        border: none;
+        padding: 0;
+        @include devices(mobile){
+            width: 175.51px;
+            height: 36.61px;
+            left: 32px;
+            top: 309.39px;
+            background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+            box-shadow: 0px 10.0291px 20.0583px rgba(128, 143, 150, 0.19);
+            border-radius: 1.00291px;
+            border: none;
+        }
+        &:after{
+            content: url("../images/Vector.svg");
+            width: 22px;
+            height: 15px;
+            padding-left: 140px;
+            @include devices(mobile){
+            content: url("../images/Vector3.svg");
+            width: 11.03px;
+            height: 7.52px;
+            }
+            }
+        &:hover{
+        background-image: linear-gradient(102.3deg, #0BB1E3 -4.62%, #0F2976 178.22%);
+        transition: 0.1px ease-in-out;
+        }
+        .get-started-text{
+            position: absolute;
+            color: $white;
+            font-family: "Avenir Next";
+            font-weight: 600px;
+            font-size: 16px;
+            line-height: 125.5%;
+            letter-spacing: 0.155em;
+            text-transform: uppercase;
+            margin: 0;
+            margin-left: 29px;
+            @include devices(mobile){
+                font-family: 'Avenir Next';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 125.5%;
+                letter-spacing: 0.155em;
+                text-transform: uppercase;
+                color: $white;
+                position: absolute;
+                margin-top: 3px;
+                margin-left: 16.21px;
+            }
+        }
+    }
+}
+
+.section-fourth{
+    display: inline-block;
+    width: 587px;
+    height: 443px;
+    position: absolute;
+    top: 923px;
+    left: 676px;
+    @include devices(mobile){
+        display: inline-block;
+        width: 311px;
+        height: 262.3px;
+        position: absolute;
+        top: 739px;
+        left: 32px;
+    }
+    .first-rectangle{
+        position: relative;
+        width: 288px;
+        height: 237px;
+        @include devices(mobile){
+            position: relative;
+            width: 155.07px;
+            height: 127.61px;
+        }
+        h3{
+            font-family: "Avenir Next";
+            position: absolute;
+            color: $darkgrey;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 116%;
+            margin: 0px;
+            padding-top: 104px;
+            padding-left: 40px;
+            @include devices(mobile){
+                position: absolute;
+                margin: 0px;
+                padding-top: 56px;
+                padding-left: 21.54px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 116%;
+                color: $darkgrey;
+            }
+        }
+        p{
+            font-family: "Avenir Next";
+            color: $darkergrey;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            position: absolute;
+            margin: 0px;
+            padding-top: 141px;
+            padding-left: 40px;
+            @include devices(mobile){
+                position: absolute;
+                margin: 0px;
+                padding-top: 76px;
+                padding-left: 21.27px;
+                font-weight: 400;
+                font-size: 8px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+            }
+        }
+        #rect{
+            position: absolute;
+            padding-left: 40px;
+            padding-top: 40px;
+            @include devices(mobile){
+                position: absolute;
+                width: 25.33px;
+                height: 25.33px;
+                padding-left: 22px;
+                padding-top: 22px;
+            }
+        }
+        #car{
+            position: absolute;
+            padding-left: 50px;
+            padding-top: 50px;
+            @include devices(mobile){
+                position: absolute;
+                width: 15.08px;
+                height: 15.08px;
+                padding-left: 26.92px;
+                padding-top: 27px;
+            }
+        }
+    }
+    .second-rectangle{
+        position: relative;
+        width: 288px;
+        height: 237px;
+        float: right;
+        margin-top: -238px;
+        
+        @include devices(mobile){
+            position: relative;
+            width: 155.07px;
+            height: 127.61px;
+            float: right;
+            margin-top: -129px;
+        }
+        h3{
+            font-family: "Avenir Next";
+            position: absolute;
+            color: $darkgrey;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 116%;
+            margin: 0;
+            position: absolute;
+            padding-top: 104px;
+            padding-left: 40px;
+            @include devices(mobile){
+                margin: 0;
+                position: absolute;
+                padding-top: 56px;
+                padding-left: 22px;
+                font-family: 'Avenir Next';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 116%;
+                color: $darkgrey;
+            }
+        }
+        p{
+            font-family: "Avenir Next";
+            color: $darkergrey;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            margin: 0;
+            position: absolute;
+            padding-top: 141px;
+            padding-left: 40px;
+            @include devices(mobile){
+                font-weight: 400;
+                font-size: 8px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+                margin: 0;
+                position: absolute;
+                padding-top: 76px;
+                padding-left: 22px;
+            }
+        }
+        #rect3{
+            position: absolute;
+            padding-left: 40px;
+            padding-top: 40px;
+            width: 48px;
+            height: 48px;
+            @include devices(mobile){
+                position: absolute;
+                padding-left: 22px;
+                padding-top: 22px;
+                width: 25.33px;
+                height: 25.33px;
+            }
+        }
+        #ship{
+            position: absolute;
+            padding-left: 52px;
+            padding-top: 52px;
+            @include devices(mobile){
+                position: absolute;
+                padding-left: 28px;
+                padding-top: 28px;
+                width: 12.92px;
+                height: 12.92px;
+            }
+        }
+    }
+    .third-rectangle{
+        position: relative;
+        width: 288px;
+        height: 237px;
+        @include devices(mobile){
+            position: relative;
+            width: 155.07px;
+            height: 127.61px;
+            margin-top: 7.08px;
+        }
+        h3{
+            font-family: "Avenir Next";
+            position: absolute;
+            color: $darkgrey;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 116%;
+            margin: 0;
+            position: absolute;
+            padding-top: 104px;
+            padding-left: 40px;
+            @include devices(mobile){
+                margin: 0;
+                position: absolute;
+                padding-top: 56px;
+                padding-left: 22px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 116%;
+                color: $darkgrey;
+            }
+        }
+        p{
+            font-family: "Avenir Next";
+            color: $darkergrey;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            margin: 0;
+            position: absolute;
+            padding-top: 141px;
+            padding-left: 40px;
+            @include devices(mobile){
+                font-weight: 400;
+                font-size: 8px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+                margin: 0;
+                position: absolute;
+                padding-top: 76px;
+                padding-left: 22px;
+            }
+        }
+        #rect4{
+            margin-left: 0;
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            padding-left: 40px;
+            padding-top: 40px;
+            @include devices(mobile){
+                margin-left: 0;
+                position: absolute;
+                width: 25.33px;
+                height: 25.33px;
+                padding-left: 22px;
+                padding-top: 22px;
+            }
+        }
+        #bus{
+            position: absolute;
+            padding-left: 52px;
+            padding-top: 52px;
+            @include devices(mobile){
+                position: absolute;
+                width: 12.92px;
+                height: 12.92px; 
+                padding-left: 28px;
+                padding-top: 28px;
+            }
+        }
+    }
+    .fourth-rectangle{
+        position: relative;
+        width: 288px;
+        height: 237px;
+        float: right;
+        margin-top: -237px;
+        @include devices(mobile){
+            position: relative;
+            width: 155.07px;
+            height: 127.61px;
+            float: right;
+            margin-top: -130px;
+        }
+        h3{
+            font-family: "Avenir Next";
+            position: absolute;
+            color: $darkgrey;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 116%;
+            margin: 0;
+            position: absolute;
+            padding-top: 104px;
+            padding-left: 40px;
+            @include devices(mobile){
+                margin: 0;
+                position: absolute;
+                padding-top: 56px;
+                padding-left: 22px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 116%;
+                color: $darkgrey;
+            }
+        }
+        p{
+            font-family: "Avenir Next";
+            color: $darkergrey;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            margin: 0;
+            position: absolute;
+            padding-top: 141px;
+            padding-left: 40px;
+            @include devices(mobile){
+                font-weight: 400;
+                font-size: 8px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+                margin: 0;
+                position: absolute;
+                padding-top: 76px;
+                padding-left: 22px;
+            }
+        }
+        #rect5{
+            position: absolute;
+            padding-left: 40px;
+            padding-top: 40px;
+            width: 48px;
+            height: 48px;
+            @include devices(mobile){
+                position: absolute;
+                padding-left: 22px;
+                padding-top: 22px;
+                width: 25.33px;
+                height: 25.33px;
+            }
+        }
+        #driving{
+            position: absolute;
+            padding-left: 52px;
+            padding-top: 52px;
+            @include devices(mobile){
+                position: absolute;
+                width: 12.92px;
+                height: 12.92px;
+                padding-left: 28px;
+                padding-top: 28px;
+            }
+        }
+    }
+}
+.section-fifth{
+    .text3{
+        position: absolute;
+        top: 1513px;
+        left: 445px;
+        right: 445px;
+        height: 95px;
+        width: 550px;
+        @include devices(mobile){
+            position: absolute;
+            top: 1035px;
+            left: 81px;
+            right: 87.03px;
+            height: 53.51px;
+            width: 206.97px;
+        }
+        h2{
+            font-family: "Avenir Next";
+            color: $yellow;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 33px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0;
+            @include devices(mobile){
+                font-family: "Avenir Next";
+                color: $yellow;
+                font-weight: 500;
+                font-size: 11px;
+                line-height: 18px;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+        h3{
+            font-family: "Avenir Next";
+            font-weight: 500;
+            font-size: 41px;
+            line-height: 110%;
+            text-transform: uppercase;
+            text-align: center;
+            color: $green;
+            margin-top: 17px;
+            white-space: nowrap;
+            @include devices(mobile){
+                font-family: "Avenir Next";
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 110%;
+                text-align: center;
+                text-transform: uppercase;   
+                color: $green;
+                margin-top: 10px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+.section-seventh{
+    .rectangles{
+        width: 1160px;
+        height: 338px;
+        position: absolute;
+        top: 1664px;
+        left: 140px;
+        right: 140px;
+        @include devices(mobile){
+            width: 331.63px;
+            height: 147.49px;
+            position: absolute;
+            top: 1105px;
+            left: 46.84px;
+        }
+        #rect6{
+            width: 360px;
+            height: 338px;
+            @include devices(mobile){
+                width: 157.09px;
+                height: 147.49px;
+            }
+        }
+        #rect7{
+            position: absolute;
+            margin-left: 40px;
+            width: 360px;
+            height: 338px;
+            @include devices(mobile){
+                position: absolute;
+                margin-left: 17.45px;
+                width: 157.09px;
+                height: 147.49px;
+            }
+        }
+        #rect8{
+            position: absolute;
+            margin-left: 440px;
+            width: 360px;
+            height: 338px;
+            @include devices(mobile){
+                visibility: hidden;
+            }        
+        }
+    }
+    #dots{
+        position: absolute;
+        top: 1829px;
+        left: 106px;
+        z-index: -1;
+        @include devices(mobile){
+            position: absolute;
+            width: 93.38px;
+            height: 92.95px;
+            left: 32px;
+            top: 1177px;
+            z-index: -1;
+        }
+    }
+    #rect9{
+        position: absolute;
+        width: 360px;
+        height: 182px;
+        top: 1867px;
+        left: 1100px;
+        z-index: -1;
+        @include devices(mobile){
+            visibility: hidden;
+        }
+    }
+    .text4{
+        font-family: "Avenir Next";
+        width: 260px;
+        height: 100px;
+        position: absolute;
+        top: 1830px;
+        left: 190px;
+        @include devices(mobile){
+            font-family: "Avenir Next";
+            position: absolute;
+            top: 1139.04px;
+            left: 68.65px;
+            width: 113.45px;
+            height: 84.37px;
+        }
+        #python{
+            position: absolute;
+            top: -100px;
+            left: 0;
+            @include devices(mobile){
+                width: 27.93px;
+                height: 27.93px;
+                top: 0;
+                left: 0;
+            }
+        }
+        h2{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 116%;
+            color: $darkgrey;
+            text-transform: uppercase;
+            margin: 0;
+            @include devices(mobile){
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 116%;
+                color: $darkgrey;
+                text-transform: uppercase;
+                margin-top: 40.73px;
+            }
+        }
+        p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            color: $darkergrey;
+            margin-top: 6px;
+            margin-bottom: 72px;
+            @include devices(mobile){
+                font-weight: 500;
+                font-size: 8px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+                margin-top: 2.62px;
+            }
+        }
+    }
+    .text5{
+        font-family: "Avenir Next";
+        width: 260px;
+        height: 100px;
+        position: absolute;
+        top: 1830px;
+        left: 590px;
+        @include devices(mobile){
+            font-family: "Avenir Next";
+            position: absolute;
+            top: 1139.04px;
+            left: 243.2px;
+            width: 113.45px;
+            height: 84.37px;
+        }
+        #iost{
+            position: absolute;
+            top: -100px;
+            @include devices(mobile){
+                position: absolute;
+                width: 27.93px;
+                height: 27.93px;
+                top: 0px;
+            }
+        }
+        h2{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 116%;
+            margin: 0;
+            color: $white;
+            text-transform: uppercase;
+            @include devices(mobile){
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 116%;
+                color: $white;
+                margin-top: 40.73px;
+                text-transform: uppercase;
+            }
+        }
+        p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            margin-top: 6px;
+            margin-bottom: 72px;
+            color: $white;
+            @include devices(mobile){
+                font-weight: 500;
+                font-size: 8px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $white;
+                margin-top: 2.62px;
+            }
+        }
+    }
+    .text6{
+        font-family: "Avenir Next";
+        width: 260px;
+        height: 100px;
+        position: absolute;
+        top: 1830px;
+        left: 990px;
+        @include devices(mobile){
+            visibility: hidden;
+        }
+        #stacks{
+            position: absolute;
+            top: -100px;
+            @include devices(mobile){
+                visibility: hidden;
+            }
+        }
+        h2{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 33px;
+            text-transform: uppercase;
+            color: $darkgrey;
+            margin: 0;
+            @include devices(mobile){
+                visibility: hidden;
+            }
+        }
+        p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            margin-top: 6px;
+            margin-bottom: 72px;
+            color: $darkgrey;
+            @include devices(mobile){
+                visibility: hidden;
+            }
+        }
+    }
+}
+#photo1{
+    position: absolute;
+    top: 2173px;
+    left: 140px;
+    @include devices(mobile){
+        position: absolute;
+        width: 286.23px;
+        height: 277.08px;
+        top: 1342px;
+        left: -255px;
+    }
+}
+#rect10{
+    position: absolute;
+    top: 2217px;
+    left: 217px;
+    z-index: -1;
+    @include devices(mobile){
+        position: absolute;
+        width: 277.59px;
+        height: 285.22px;
+        top: 1364.37px;
+        left: -215.85px;
+        z-index: -1;
+    }
+}
+.section-eighth{
+    position: absolute;
+    height: 316px;
+    width: 412px;
+    top: 2317px;
+    left: 868px;
+    @include devices(mobile){
+        position: absolute;
+        height: 185.22px;
+        width: 258px;
+        top: 1403px;
+        left: 85px;
+    }
+    .text7{
+        font-family: 'Avenir Next';
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 33px;
+        text-transform: uppercase;
+        color: $yellow;
+        margin: 0;
+        @include devices(mobile){
+            font-family: 'Avenir Next';
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+            text-transform: uppercase;
+            color: $yellow;
+            margin: 0;
+        }
+    }
+    .text8{
+        font-family: 'Avenir Next';
+        font-weight: 500;
+        font-size: 41px;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: $green;
+        margin-top: 17px;
+        margin-bottom: 0;
+        @include devices(mobile){
+            font-family: 'Avenir Next';
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 110%;
+            text-transform: uppercase;
+            color: $green;
+            margin-top: 8px;
+            margin-bottom: 0;
+        }
+    }
+    .para3{
+        font-family: 'Avenir Next';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 132%;
+        letter-spacing: 0.04em;
+        color: $darkergrey;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        @include devices(mobile){
+            font-family: 'Avenir Next';
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            color: $darkergrey;
+            margin-top: 16.17px;
+            margin-bottom: 24.81px;
+        }
+    }
+    .get-started{
+        width: 350px;
+        height: 73px;
+        background-image: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+        box-shadow: 0px 20px 40px rgba(128, 143, 150, 0.19);
+        border-radius: 2px;
+        border: none;
+        padding: 0;
+        @include devices(mobile){
+            width: 175.51px;
+            height: 36.61px;
+            left: 32px;
+            top: 309.39px;
+            background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+            box-shadow: 0px 10.0291px 20.0583px rgba(128, 143, 150, 0.19);
+            border-radius: 1.00291px;
+            border: none;
+        }
+        &:after{
+            content: url("../images/Vector.svg");
+            width: 22px;
+            height: 15px;
+            padding-left: 140px;
+            @include devices(mobile){
+            content: url("../images/Vector3.svg");
+            width: 11.03px;
+            height: 7.52px;
+            }
+            }
+        &:hover{
+        background-image: linear-gradient(102.3deg, #0BB1E3 -4.62%, #0F2976 178.22%);
+        transition: 0.1px ease-in-out;
+        }
+        .get-started-text{
+            position: absolute;
+            color: $white;
+            font-family: "Avenir Next";
+            font-weight: 600px;
+            font-size: 16px;
+            line-height: 125.5%;
+            letter-spacing: 0.155em;
+            text-transform: uppercase;
+            margin: 0;
+            margin-left: 29px;
+            @include devices(mobile){
+                font-family: 'Avenir Next';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 125.5%;
+                letter-spacing: 0.155em;
+                text-transform: uppercase;
+                color: $white;
+                position: absolute;
+                margin-top: 3px;
+                margin-left: 16.21px;
+            }
+        }
+    }
+}
+.section-ninth{
+    width: 540px;
+    height: 95px;
+    position: absolute;
+    top: 2915px;
+    left: 140px;
+    @include devices(mobile){
+        width: 285px;
+        height: 52px;
+        position: absolute;
+        top: 1698px;
+        left: 35px;
+    }
+    .text9{
+        h2{
+            font-family: 'Avenir Next';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 33px;
+            text-transform: uppercase;
+            color: $yellow;
+            margin: 0;
+            @include devices(mobile){
+                font-family: 'Avenir Next';
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 18px;
+                text-transform: uppercase;
+                color: $yellow;
+                margin: 0    ;
+            }        
+        }
+        h3{
+            font-family: 'Avenir Next';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 41px;
+            line-height: 110%;
+            text-transform: uppercase;
+            color: $green;
+            margin-top: 17px;
+            @include devices(mobile){
+                font-family: 'Avenir Next';
+                font-weight: 500;
+                font-size: 21.5px;
+                line-height: 110%;
+                text-transform: uppercase;
+                color: $green;
+                margin-top: 7.59px;
+            }
+        }
+    }
+}
+.section-tenth{
+    #arrow{
+        width: 27.96px;
+        height: 32px;
+        position: absolute;
+        top: 2949.02px;
+        left: 1158px;
+        @include devices(mobile){
+            visibility: hidden;
+        }
+    }
+    #arrow2{
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        top: 2925px;
+        left: 1225px;
+        @include devices(mobile){
+            visibility: hidden;
+        }
+    }
+}
+.section-eleventh{
+    .rectangles2{
+        width: 1160px;
+        height: 419px;
+        position: absolute;
+        top: 3060px;
+        left: 140px;
+        @include devices(mobile){
+            width: 378.25px;
+            height: 271.63px;
+            position: absolute;
+            top: 1765.52px;
+            left: 35px;
+        }
+        #rect11{
+            @include devices(mobile){
+            width: 233.38px;
+            height: 271.63px;
+            position: absolute;
+            margin-left: 0px;
+            }
+        }
+        #rect12{
+            position: absolute;
+            margin-left: 40px;
+            @include devices(mobile){
+                width: 233.38px;
+                height: 271.63px;
+                position: absolute;
+                margin-left: 259.31px;
+            }
+        }
+        #rect13{
+            position: absolute;
+            margin-left: 440px;
+            @include devices(mobile){
+                visibility: hidden;
+            }
+        }
+    }
+    .people{
+        width: 974.54px;
+        height: 268px;
+        position: absolute;
+        top: 3092px;
+        left: 180px;
+        @include devices(mobile){
+            width: 359.14px;
+            height: 173.74px;
+            position: absolute;
+            top: 1786.27px;
+            left: 60.93px;
+        }
+        #r{
+            margin-right: 241px;
+            @include devices(mobile){
+                width: 103.08px;
+                height: 173.74px;
+                left: 60.93px;
+                top: 1786.27px;
+            }
+        }
+        #leon{
+            @include devices(mobile){
+            position: absolute;
+            width: 99.83px;
+            height: 173.74px;
+            left: 259.31px;
+            top: 0px;
+            }
+        }
+        #philip{
+            position: absolute;
+            margin-left: 246px;
+            @include devices(mobile){
+                visibility: hidden;
+            }
+        }
+    }
+    .text10{
+        width: 1060px;
+        height: 63px;
+        position: absolute;
+        top: 3384px;
+        left: 180px;
+        @include devices(mobile){
+            width: 454px;
+            height: 41px;
+            position: absolute;
+            top: 1975.32px;
+            left: 61px;
+        }
+        #text11{
+            display: inline-block;
+            width: 260px;
+            height: 63px;
+            font-family: 'Avenir Next';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            color: $darkergrey;
+            position: relative;
+            margin: 0;
+            @include devices(mobile){
+                display: inline-block;
+                width: 191px;
+                height: 41px;
+                font-family: 'Avenir Next';
+                font-style: italic;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+                position: absolute;
+            }
+        }
+        #text12{
+            display: inline-block;
+            width: 260px;
+            height: 63px;
+            font-family: 'Avenir Next';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            color: $darkergrey;
+            position: relative;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 140px;
+
+            @include devices(mobile){
+                display: inline-block;
+                width: 191px;
+                height: 41px;
+                font-family: 'Avenir Next';
+                font-style: italic;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+                position: relative;
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: 259px;
+            }
+        }
+        #text13{
+            display: inline-block;
+            width: 260px;
+            height: 63px;
+            font-family: 'Avenir Next';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            color: $darkergrey;
+            position: absolute;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 140px;
+            @include devices(mobile){
+                visibility: hidden;
+            }
+        }
+    }
+    .text11{
+        width: 932px;
+        height: 41px;
+        position: absolute;
+        top: 3109px;
+        left: 336px;
+        @include devices(mobile){
+            width: 105px;
+            height: 26.85px;
+            position: absolute;
+            top: 1797.32px;
+            left: 154px;
+        }
+        .text12{
+            display: inline-block;
+            #text14{
+                font-family: 'Avenir Next';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 116%;
+                color: $darkgrey;
+                margin-top: 0;
+                margin-bottom: 0;
+                @include devices(mobile){
+                    font-family: 'Avenir Next';
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 116%;
+                    color: $darkgrey;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+            #text15{
+                font-family: 'Avenir Next';
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                @include devices(mobile){
+                    font-family: 'Avenir Next';
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 132%;
+                    letter-spacing: 0.04em;
+                    color: $darkergrey;  
+                    margin-top: 5px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .text13{
+            display: inline-block;
+            margin-left: 268px;
+            position: absolute;
+            #text16{
+                font-family: 'Avenir Next';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 116%;
+                color: $darkgrey;
+                margin-top: 0;
+                margin-bottom: 0;
+                @include devices(mobile){
+                visibility: hidden;
+                }
+            }
+            #text17{
+                font-family: 'Avenir Next';
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                @include devices(mobile){
+                    visibility: hidden;
+                    }
+            }
+        }
+        .text14{
+            display: inline-block;
+            position: absolute;
+            margin-left: 652px;
+            #text18{
+                font-family: 'Avenir Next';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 116%;
+                color: $darkgrey;
+                margin-top: 0;
+                margin-bottom: 0;
+                @include devices(mobile){
+                    visibility: hidden;
+                    }
+            }
+            #text19{
+                font-family: 'Avenir Next';
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                @include devices(mobile){
+                    visibility: hidden;
+                    }
+            }
+        }
+    }
+}
+.footer{
+    position: absolute;
+    width: 1440px;
+    height: 431px;
+    left: 0px;
+    top: 3651px;
+    background-color: $footer;
+    @include devices(mobile){
+        position: absolute;
+        width: 375px;
+        height: 852px;
+        left: 0px;
+        top: 2102px;
+        background-color: $footer;
+    }
+    .first-column{
+        #au{
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 140px;
+            width: 48.4px;
+            height: 35.08px;
+            @include devices(mobile){
+                position: absolute;
+                margin-top: 40px;
+                margin-left: 32px;
+                width: 48.4px;
+                height: 35.08px;
+            }
+        }
+        #awesome{
+            position: absolute;
+            margin-top: 111.54px;
+            margin-left: 199px;
+            @include devices(mobile){
+                position: absolute;
+                margin-top: 51.54px;
+                margin-left: 91px;
+            }
+        }
+        .text15{
+            position: absolute;
+            margin-top: 152px;
+            margin-left: 140px;
+            width: 249px;
+            height: 54px;
+            font-family: 'Avenir Next';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 132%;
+            letter-spacing: 0.04em;
+            color: $darkergrey;
+            @include devices(mobile){
+                position: absolute;
+                margin-top: 92px;
+                margin-left: 32px;
+                width: 249px;
+                height: 54px;
+                font-family: 'Avenir Next';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: $darkergrey;
+            }
+        }
+        .text16{
+            position: absolute;
+            margin-top: 222px;
+            margin-left: 140px;
+            font-family: 'Avenir Next';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            font-feature-settings: 'liga' off;
+            color: $darkergrey;
+            @include devices(mobile){
+                position: absolute;
+                margin-top: 162px;
+                margin-left: 32px;
+                font-family: 'Avenir Next';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                font-feature-settings: 'liga' off;
+                color: $darkergrey;
+            }
+        }
+        .text17{
+            position: absolute;
+            margin-top: 254px;
+            margin-left: 140px;
+            font-family: 'Avenir Next';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            font-feature-settings: 'liga' off;
+            color: $darkergrey;
+            @include devices(mobile){
+                position: absolute;
+                margin-top: 194px;
+                margin-left: 32px;
+                font-family: 'Avenir Next';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px; 
+                font-feature-settings: 'liga' off;
+                color: $darkergrey;
+            }
+        }
+        #bg{
+            position: absolute;
+            margin-top: 297px;
+            margin-left: 140px;
+            @include devices(mobile){
+                position: absolute;
+                margin-top: 237px;
+                margin-left: 32px;
+            }
+        }
+        #path{
+            position: absolute;
+            margin-top: 304.47px;
+            margin-left: 147.47px;
+            @include devices(mobile){
+                position: absolute;
+                margin-top: 244.7px;
+                margin-left: 39.47px;
+            }
+        }
+        #dribble{
+            position: absolute;
+            margin-top: 297px;
+            margin-left: 188px;
+            @include devices(mobile){
+                position: absolute;
+                margin-top: 237px;
+                margin-left: 80px;
+            }
+        }
+        #twitter{
+            position: absolute;
+            margin-top: 297px;
+            margin-left: 236px;
+            @include devices(mobile){
+                position: absolute;
+                margin-top: 237px;
+                margin-left: 128px;
+            }
+        }
+        #youtube{
+            position: absolute;
+            margin-top: 297px;
+            margin-left: 284px;
+            @include devices(mobile){
+                position: absolute;
+                margin-top: 237px;
+                margin-left: 176px;
+            }
+        }
+    }
+    .second-column{
+        width: 118px;
+        height: 232px;
+        margin-top: 97px;
+        margin-left: 455.5px;
+        display: inline-block;
+        @include devices(mobile){
+            width: 118px;
+            height: 236px;
+            margin-top: 309px;
+            margin-left: 32px;
+            display: inline-block;
+        }
+        .text18{
+            width: 160px;
+            height: 30px;
+            font-family: 'Avenir Next';
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            font-feature-settings: 'liga' off;
+            color: $green;
+            margin-top: 0;
+            margin-bottom: 24px;
+            @include devices(mobile){
+                width: 114px;
+                height: 30px;
+                font-family: 'Avenir Next';
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 30px;
+                font-feature-settings: 'liga' off;
+                color: $green;
+            }
+        }
+        ul{
+            padding: 0;
+            list-style-type: none;
+            li{
+                width: 118px;
+                height: 26px;
+                font-family: 'Avenir Next';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                font-feature-settings: 'liga' off;
+                color: $darkgrey;
+                margin-bottom: 12px;
+                padding: 0;
+                &:hover {
+                color: rgb(148, 148, 148);
+                }
+            }
+        }
+    }
+    .third-column{
+        display: inline-block;
+        width: 160px;
+        height: 232px;
+        margin-top: 0px;
+        margin-left: 162.5px;
+        @include devices(mobile){
+            display: inline-block;
+            width: 118px;
+            height: 236px;
+            margin-top: 309px;
+            margin-left: 40px;
+        }
+        .text19{
+            width: 160px;
+            height: 30px;
+            font-family: 'Avenir Next';
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            font-feature-settings: 'liga' off;
+            color: $green;
+            margin-top: 0;
+            margin-bottom: 24px;
+            @include devices(mobile){
+                width: 114px;
+                height: 30px;
+                font-family: 'Avenir Next';
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 30px;
+                font-feature-settings: 'liga' off;
+                color: $green;
+            }
+        }
+        ul{
+            padding: 0;
+            list-style-type: none;
+            li{
+                width: 118px;
+                height: 26px;
+                font-family: 'Avenir Next';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                font-feature-settings: 'liga' off;
+                color: $darkgrey;
+                margin-bottom: 12px;
+                padding: 0;
+                &:hover {
+                    color: rgb(148, 148, 148);
+                    }
+            }
+        }
+    }
+    .fourth-column{
+        display: inline-block;
+        position: absolute;
+        width: 283px;
+        height: 230.6px;
+        margin-top: 97px;
+        margin-left: 120.05px;
+        @include devices(mobile){
+            position: absolute;
+            width: 283px;
+            height: 230.6px;
+            margin-top: 581px;
+            margin-left: -282px;
+        }
+        .text20{
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: 'Avenir Next';
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            font-feature-settings: 'liga' off;
+            color: $green;
+            text-transform: uppercase;
+            @include devices(mobile){
+                font-family: 'Avenir Next';
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 30px;
+                display: flex;
+                align-items: center;
+                font-feature-settings: 'liga' off;
+                color: $green;
+                text-transform: uppercase;
+            }
+        }
+        form{
+            textarea{
+                width: 283px;
+                height: 113px;
+                box-sizing: border-box;
+                border: none;
+                border-radius: 4px;
+                padding: 12px 24px;
+                background-color: #f8f8f8;
+                resize: none;
+                font-family: 'Avenir Next';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                font-feature-settings: 'liga' off;
+                color: $darkergrey;
+                margin-bottom: 0;
+                margin-top: 13px;
+            }
+        }
+        .send-message{
+            height: 56.6px;
+            width: 283px;
+            border-radius: 1.6px;
+            background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+            box-shadow: 0px 15.5068px 31.0137px rgba(128, 143, 150, 0.19);
+            border: none;
+            border-radius: 1.55068px;
+            font-family: 'Avenir Next';
+            font-weight: 500;
+            font-size: 12.4055px;
+            line-height: 125.5%;
+            text-transform: uppercase;
+            color: $white;
+            position: absolute;
+            margin-top: 14px;
+            margin-bottom: 0;
+            &:after{
+                content: url("../images/Vector.svg");
+                width: 17.06px;
+                height: 11.63px;
+                padding-left: 142px;
+            }
+            &:hover{
+                background-image: linear-gradient(102.3deg, #0BB1E3 -4.62%, #0F2976 178.22%);
+                transition: 0.1px ease-in-out;
+            }
+        }
+    }
+}
